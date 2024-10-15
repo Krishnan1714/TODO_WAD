@@ -1,0 +1,287 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--body-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+body.dark h2{
+    color: rgb(244, 90, 116);
+}
+
+
+input[type="date"] {
+    padding: 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    width: 200px;
+    margin-right: 10px;
+    background-color: var(--sidebar-color);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--sidebar-color);
+    cursor: pointer;
+    transition: var(--tran-02);
+}
+body.dark button{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color:rgb(244, 90, 116);
+    color: black;
+    cursor: pointer;
+    transition: var(--tran-02);
+}
+
+button:hover {
+    background-color: var(--primary-color-light);
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: var(--sidebar-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+#dateList {
+    width:50%;
+}
+
+.inputSection {
+    background-color: var(--sidebar-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+h4 {
+    margin: 10px 0;
+    color: var(--primary-color);
+}
+body.dark h4{
+    margin: 10px 0;
+    color: black;   
+}
+
+.markCompleteBtn, .markIncompleteBtn, .removeTaskBtn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: var(--tran-02);
+}
+
+.markCompleteBtn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.markCompleteBtn:hover {
+    background-color: #388e3c;
+}
+
+.markIncompleteBtn {
+    background-color: #f44336;
+    color: white;
+}
+
+.markIncompleteBtn:hover {
+    background-color: #d32f2f;
+}
+
+.toggleCompletedBtn, .toggleIncompletedBtn {
+    background-color: var(--primary-color);
+    color: var(--sidebar-color);
+    margin-top: 10px;
+    display: inline-block;
+    transition: var(--tran-02);
+}
+
+.backBtn {
+    background-color: var(--primary-color);
+    color: var(--sidebar-color);
+    margin-top: 20px;
+    transition: var(--tran-02);
+    
+}
+
+/* Main Content next to Sidebar */
+.main-content {
+    margin-left: 350px; /* Increase the left margin even more to ensure it clears the sidebar */
+    padding: 20px;
+    transition: var(--tran-03);
+}
+
+.sidebar.close + .main-content {
+    margin-left: 100px; /* Adjust the margin when the sidebar is collapsed */
+}
+
+/* To-Do Section specific styling */
+.todo-section {
+    padding: 20px;
+    background-color: var(--sidebar-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 30px; /* Add extra spacing on the left to ensure visibility */
+    width: calc(100% - 380px); /* Adjust width to fit within available space */
+    max-width: 900px; /* Optional: Set a max-width for better control */
+}
+
+.inputSection h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.inputSection input[type="text"] {
+    padding: 15px; /* Increase padding for larger input area */
+    border: 2px solid var(--primary-color);
+    border-radius: 8px; /* Slightly larger border-radius */
+    width: 80%; /* Increased width for larger input box */
+    height:50%;
+    margin-right: 10px;
+    font-size: 18px; /* Larger font size */
+    background-color: var(--sidebar-color);
+    color: var(--text-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+    transition: var(--tran-02);
+}
+
+body.dark .inputSection input[type="text"] {
+    padding: 15px; /* Increase padding for larger input area */
+    border: 2px solid black;
+    border-radius: 8px; /* Slightly larger border-radius */
+    width: 80%; /* Increased width for larger input box */
+    height:50%;
+    margin-right: 10px;
+    font-size: 18px; /* Larger font size */
+    background-color: white;
+    color: var(--text-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+    transition: var(--tran-02);
+}
+
+.inputSection button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--sidebar-color);
+    cursor: pointer;
+    transition: var(--tran-02);
+}
+
+
+
+.taskList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.taskList li {
+    background-color: var(--sidebar-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+body.dark .taskList li{
+    background-color: var(--sidebar-color);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.completedList li{
+    background-color: var(--sidebar-color);
+    border: 1px solid rgb(231, 100, 100);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+body.dark .completedList li{
+    background-color: var(--sidebar-color);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.incompletedList li{
+    background-color: var(--sidebar-color);
+    border: 1px solid rgb(231, 100, 100);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+body.dark .incompletedList li{
+    background-color: var(--sidebar-color);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+/* Ensure responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 100px; /* Reduced margin on smaller screens */
+    }
+
+    .todo-section {
+        margin-left: 10px;
+        width: 100%; /* Take full width on smaller screens */
+    }
+}
+
