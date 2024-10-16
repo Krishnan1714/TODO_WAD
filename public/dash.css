@@ -1,0 +1,147 @@
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background: var(--sidebar-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures items like logout go to the bottom */
+    transition: var(--tran-03);
+}
+
+.sidebar .menu-bar {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allow the main content to grow */
+}
+
+.sidebar .menu-bar .dashboard-section {
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.sidebar .menu-bar h3 {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sidebar .menu-bar canvas {
+    margin-bottom: 20px;
+    background-color: var(--body-color);
+}
+
+.sidebar .menu-bar p {
+    margin: 10px 0;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+body.dark .sidebar .menu-bar h3 {
+    color: rgb(244, 90, 116);
+}
+
+body.dark .sidebar .menu-bar p {
+    color: var(--text-color);
+}
+
+body.dark .sidebar {
+    background: #333;
+    color: #fff;
+}
+
+body.dark .sidebar .toggle {
+    background: #000;
+    color: #fff;
+}
+
+/* Bottom content specific for light mode */
+.sidebar .bottom-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 300px;
+}
+
+/* Logout and Mode Toggle Styling */
+.menu-bar .mode, .menu-bar .logout {
+    position: relative;
+    background-color: var(--sidebar-color);
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-bar .mode .text, .menu-bar .logout .text {
+    color: var(--text-color);
+}
+
+
+.menu-bar .mode .moon-sun, .menu-bar .logout .logout-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+}
+.menu-bar .moon-sun{
+    position: relative;
+    right:25px;
+}
+
+body.dark .menu-bar .mode .text, body.dark .menu-bar .logout .text {
+    color: var(--text-color);
+}
+
+.toggle-switch .switch {
+    position: relative;
+    height: 23px;
+    padding: 10px;
+    width: 44px;
+    border-radius: 25px;
+    background: rgb(231, 100, 100);
+}
+
+.switch::before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: -3px;
+    left: 4px;
+    transform: translateY(50%);
+    background: var(--sidebar-color);
+    transition: var(--tran-02);
+}
+
+body.dark .switch::before {
+    left: 25px;
+}
+
+.logout {
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--sidebar-color);
+    transition: var(--tran-02);
+}
+
+.logout:hover {
+    background-color: var(--primary-color-light);
+}
+
+.logout .logout-icon {
+    color: var(--sidebar-color);
+    font-size: 20px;
+}
+
+
+

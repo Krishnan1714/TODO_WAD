@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List with Sidebar</title>
+    <!-- Link to external CSS files -->
+    <link rel="stylesheet" href="style_sidebar.css">
+    <link rel="stylesheet" href="ctodo.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="dark">
+    <!-- Sidebar Section -->
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                
+                    <img src="todoicon.png" alt="image">
+                
+                </span>
+                <div class="text header-text">
+                <a class="name" href="todo.html"></a>
+                    <span>TO-DO LIST</span>
+                </a>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <ul class="menu-links">
+                <li class="nav-links">
+                    <a href="#">
+                        <i class='bx bxs-user icon'></i>
+                        <span class="text nav-text">PROFILE</span>
+                    </a>
+                </li>
+                <li class="nav-links">
+                    <a href="dashboard.html">
+                        <i class='bx bx-home-alt icon'></i>
+                        <span class="text nav-text1">DASHBOARD</span>
+                    </a>
+                    
+                </li>
+                <li class="nav-links">
+                    <a href="#">
+                        <i class='bx bx-bell icon'></i>
+                        <span class="text nav-text">NOTIFICATIONS</span>
+                    </a>
+                </li>
+                <li class="nav-links">
+                    <a href="#">
+                        <i class="fa fa-gear icon" style="font-size:24px"></i>
+                        <span class="text nav-text">SETTINGS</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="bottom-content">
+                <li class="nav-links">
+                    <a href="/login">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">LOGOUT</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="moon-sun">
+                        <i class="bx bx-moon icon moon"></i>
+                    </div >
+                    <span class="mode-text text">DARK MODE</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- To-Do List Section -->
+    <section>
+        <center>
+        <h2>Select a Date and Add to List</h2>
+        <input type="date" id="dateInput">
+        <button id="addDateBtn">Add Date</button>
+        <ul id="dateList"></ul>
+        <div id="dynamicSections" style="width:50%"></div></center>
+    </section>
+
+
+
+
+    <!-- Link to external JavaScript files -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script_sidebar.js"></script>
+    <script src="jtrial.js"></script>
+</body>
+</html>
