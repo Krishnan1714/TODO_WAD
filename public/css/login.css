@@ -1,0 +1,100 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #1f1f1f, #131313);
+}
+
+.background {
+    background-image: url("/wallpaperflare.com_wallpaper.jpg"); /* Use the background image similar to the one you shared */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: animateBg 5s linear infinite;
+}
+@keyframes animateBg{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.login-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 80%;
+    text-align: center;
+    color: #fff;
+    backdrop-filter: blur(7px);
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+    width: 90%;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.input-container .icon {
+    position: absolute;
+    left: 350px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #aaa;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.options a {
+    color: #6cb2eb;
+    text-decoration: none;
+}
+
+button {
+    background-color: #6cb2eb;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+
+button:hover {
+    background-color: #5a9fd3;
+}
+
+p {
+    font-size: 14px;
+}
+
+p a {
+    color: #6cb2eb;
+    text-decoration: none;
+}

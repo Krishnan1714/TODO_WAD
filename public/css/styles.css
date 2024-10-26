@@ -1,0 +1,175 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--body-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Dark mode styles */
+body.dark {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark h2 {
+    color: rgb(244, 90, 116);
+}
+
+/* Form inputs */
+input[type="date"], input[type="text"] {
+    padding: 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    width: 200px;
+    background-color: var(--sidebar-color);
+    color: var(--text-color);
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="text"] {
+    width: 80%;
+    font-size: 18px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--sidebar-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--primary-color-light);
+}
+
+body.dark button {
+    background-color: rgb(244, 90, 116);
+    color: #121212;
+}
+
+/* Task List */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: var(--sidebar-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.taskList li {
+    width: 100%;
+}
+
+body.dark .taskList li {
+    background-color: #333;
+    border-color: #444;
+}
+
+/* Buttons within tasks */
+.markCompleteBtn, .markIncompleteBtn, .removeTaskBtn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.markCompleteBtn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.markCompleteBtn:hover {
+    background-color: #388e3c;
+}
+
+.markIncompleteBtn {
+    background-color: #f44336;
+    color: white;
+}
+
+.markIncompleteBtn:hover {
+    background-color: #d32f2f;
+}
+
+/* Toggle buttons */
+.toggleCompletedBtn, .toggleIncompletedBtn, .backBtn {
+    background-color: var(--primary-color);
+    color: var(--sidebar-color);
+    margin-top: 10px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark .backBtn {
+    background-color: rgb(244, 90, 116);
+}
+
+/* Main content styling */
+.main-content {
+    margin-left: 350px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar.close + .main-content {
+    margin-left: 100px;
+}
+
+.todo-section {
+    padding: 20px;
+    background-color: var(--sidebar-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 30px;
+    width: calc(100% - 380px);
+    max-width: 900px;
+}
+
+.inputSection {
+    background-color: var(--sidebar-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+h4 {
+    margin: 10px 0;
+    color: var(--primary-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 100px;
+    }
+
+    .todo-section {
+        margin-left: 10px;
+        width: 100%;
+    }
+}
