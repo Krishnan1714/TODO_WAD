@@ -1,4 +1,6 @@
 const User = require('../models/User');
+const Task = require('../models/Task');
+
 const bcrypt = require('bcrypt');
 
 exports.registerUser = async (req, res) => {
@@ -36,3 +38,22 @@ exports.logoutUser = (req, res) => {
         res.redirect('/login');
     });
 };
+
+exports.dashBoard = async (req, res) => {
+    try {
+        const tasks = await Task.find({ user: req.session.userId })
+        const totalTasks = tasks.length;
+        const completedTasks = tasks.filter(task => task.completed).length;
+
+        res.render('dashboard', {
+            tasks,
+            totalTasks,
+            completedTasks,
+            pendingTasks: totalTasks - completedTasks,
+        });
+    } catch (error) {
+        console.error(error)
+        res.status(500).send('Server Error');
+    }
+}
+

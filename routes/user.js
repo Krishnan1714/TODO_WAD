@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController');
+const taskController = require('../controllers/taskController');
+
 
 // Serve the login page when accessing the root URL
 router.get('/', (req, res) => {
@@ -21,5 +23,7 @@ router.post('/login', userController.loginUser);
 
 // Logout Route
 router.get('/logout', userController.logoutUser);
+
+router.get('/dashBoard',userController.dashBoard)
 
 module.exports = router;

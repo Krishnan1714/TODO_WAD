@@ -39,6 +39,9 @@ input[type="text"] {
     width: 80%;
     font-size: 18px;
 }
+a { color: rgb(244, 90, 116);
+    text-decoration: none;
+ } 
 
 /* Buttons */
 button {
@@ -99,6 +102,7 @@ body.dark .taskList li {
 .markCompleteBtn {
     background-color: #4caf50;
     color: white;
+    
 }
 
 .markCompleteBtn:hover {
